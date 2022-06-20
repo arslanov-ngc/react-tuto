@@ -1,0 +1,17 @@
+.book {
+  margin: 0 auto;
+  max-width: 280px;
+  width: 100%;
+  background-color: #35475a;
+  border-radius: 1rem;
+  color: #fff;
+}
+.book__img {
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.book__desc {
+  padding: 1rem;
+}
