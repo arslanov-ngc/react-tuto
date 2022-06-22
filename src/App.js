@@ -1,5 +1,6 @@
 import "./App.css";
 import { Book } from "./components/Book";
+import Children from "./components/Children";
 
 function App() {
   const arrayOfBooks = [
@@ -30,13 +31,19 @@ function App() {
     },
   ];
   return (
-    <div className="App">
-      <div className="container">
-        {arrayOfBooks.map(({ imgSrc, title, author }, i) => {
-          return <Book src={imgSrc} title={title} author={author} key={i} />;
-        })}
+    <>
+      <div className="App">
+        <div className="container">
+          {arrayOfBooks.map(({ imgSrc, title, author }, i) => {
+            return <Book src={imgSrc} title={title} author={author} key={i} />;
+          })}
+        </div>
       </div>
-    </div>
+
+      
+      {/* <Children>Children</Children>
+      <Children children="Children" /> */}
+    </>
   );
 }
 

@@ -3,6 +3,7 @@
   max-width: 280px;
   width: 100%;
   background-color: #35475a;
+  box-shadow: -6px 6px #161a1f;
   border-radius: 1rem;
   color: #fff;
 }
@@ -14,4 +15,24 @@
 }
 .book__desc {
   padding: 1rem;
+}
+.flex__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: -3px 3px 1px #000;
+  transition: 0.2s ease;
+  user-select: none;
+}
+.btn:hover {
+  text-shadow: 0 0 3px #000;
 }
