@@ -5,7 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.app__title {
+  font-size: 3em;
+  color: #35475a;
 }
 
 .container {

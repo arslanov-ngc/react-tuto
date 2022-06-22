@@ -1,6 +1,6 @@
 import "./App.css";
 import { Book } from "./components/Book";
-import Children from "./components/Children";
+import BookAdder from "./components/BookAdder";
 
 function App() {
   const arrayOfBooks = [
@@ -33,16 +33,14 @@ function App() {
   return (
     <>
       <div className="App">
+        <h3 className="app__title">Books</h3>
+        <BookAdder />
         <div className="container">
           {arrayOfBooks.map(({ imgSrc, title, author }, i) => {
             return <Book src={imgSrc} title={title} author={author} key={i} />;
           })}
         </div>
       </div>
-
-      
-      {/* <Children>Children</Children>
-      <Children children="Children" /> */}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Counter from "./Counter";
 
-import "./Book.css";
+import "./css/Book.css";
 
 export const Book = ({ src, title, author }) => {
   const [txtTitle, setTxtTitle] = useState(title);
@@ -13,10 +13,6 @@ export const Book = ({ src, title, author }) => {
   const titleResetHandler = () => {
     setTxtTitle(title);
   };
-
-  // const clickHandler = () => {
-  //   console.log("Clicked!");
-  // };
 
   return (
     <div className="book">

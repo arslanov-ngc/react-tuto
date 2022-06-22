@@ -1,0 +1,43 @@
+.BookAdder {
+  width: 50%;
+  height: auto;
+  padding: 2rem 0;
+  padding-top: 0;
+  border-radius: 1rem;
+  background-color: #35475a;
+}
+.BookAdder .adder__title {
+  font-size: 2em;
+  color: #fff;
+}
+.BookAdder .adder__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.adder__controls .adder__control {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.adder__controls .adder__control label {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+}
+.adder__controls .adder__control input {
+  color: #35475a;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+.adder__controls .btn {
+  margin: 1rem 0;
+}
