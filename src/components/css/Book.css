@@ -7,6 +7,11 @@
   border-radius: 1rem;
   color: #fff;
 }
+.book .line {
+  width: 100%;
+  height: 1px;
+  background-color: #161a1f86;
+}
 .book__img {
   object-fit: cover;
   width: 100%;
@@ -15,6 +20,9 @@
 }
 .book__desc {
   padding: 1rem;
+}
+.book__desc > .btn {
+  margin-top: 10px;
 }
 .flex__group {
   display: flex;

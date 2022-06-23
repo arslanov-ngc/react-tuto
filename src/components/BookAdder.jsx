@@ -19,17 +19,26 @@ const BookAdder = () => {
     setNewImgSrc(e.target.value);
   };
 
-  const submitHandler = e => {
+  const submitHandler = (e) => {
     e.preventDefault();
 
     const newBook = {
+      imgSrc: newImgSrc,
       title: newTitle,
       author: newAuthor,
-      imgSrc: newImgSrc,
-    }
+    };
 
     console.log(newBook);
-  }
+
+    const inputs = document.querySelectorAll(".bookInput");
+
+    inputs.forEach((input) => {
+      input.value = "";
+      setNewTitle("");
+      setNewAuthor("");
+      setNewImgSrc("");
+    });
+  };
 
   return (
     <div className="BookAdder">
@@ -37,15 +46,15 @@ const BookAdder = () => {
       <form className="adder__controls" onSubmit={submitHandler}>
         <div className="adder__control">
           <label>Title</label>
-          <input type="text" onChange={addTitleHandler}/>
+          <input type="text" className="bookInput" onChange={addTitleHandler} />
         </div>
         <div className="adder__control">
           <label>Author</label>
-          <input type="text" onChange={addAuthorHandler}/>
+          <input type="text" className="bookInput" onChange={addAuthorHandler} />
         </div>
         <div className="adder__control">
           <label>Image Source</label>
-          <input type="text" onChange={addImgSrcHandler}/>
+          <input type="text" className="bookInput" onChange={addImgSrcHandler} />
         </div>
         <input type="submit" className="btn" value={"Add Book"} />
       </form>

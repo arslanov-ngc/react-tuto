@@ -20,6 +20,7 @@ export const Book = ({ src, title, author }) => {
       <div className="book__desc">
         <h3>{txtTitle}</h3>
         <p>{author}</p>
+        <div className="line"></div>
         <div className="flex__group">
           <button className="btn" onClick={titleChangeHandler}>
             Change Title

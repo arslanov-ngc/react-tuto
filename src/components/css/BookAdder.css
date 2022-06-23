@@ -1,10 +1,10 @@
 .BookAdder {
   width: 50%;
   height: auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
   padding-top: 0;
   border-radius: 1rem;
-  background-color: #35475a;
+  background-color: #4f657c;
 }
 .BookAdder .adder__title {
   font-size: 2em;
@@ -32,7 +32,7 @@
   font-weight: 300;
 }
 .adder__controls .adder__control input {
-  color: #35475a;
+  color: #4f657c;
   border: none;
   outline: none;
   border-radius: 5px;
