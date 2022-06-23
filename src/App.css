@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   box-sizing: border-box;
   text-align: center;
@@ -6,10 +11,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem 3rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.app__title {
+.title {
   font-size: 3em;
   color: #35475a;
 }

@@ -1,6 +1,7 @@
 import "./App.css";
-import { Book } from "./components/Book";
-import BookAdder from "./components/BookAdder";
+import { Book } from "./components/Book/Book";
+import BookAdder from "./components/Book/BookAdder";
+import UseStateAdvanced from "./components/useStateAdvanced/UseStateAdvanced";
 
 function App() {
   const arrayOfBooks = [
@@ -34,13 +35,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <h3 className="app__title">Books</h3>
-        <BookAdder />
-        <div className="container">
-          {arrayOfBooks.map(({ imgSrc, title, author }, i) => {
-            return <Book src={imgSrc} title={title} author={author} key={i} />;
-          })}
-        </div>
+        <UseStateAdvanced />
       </div>
     </>
   );
