@@ -2,6 +2,8 @@ import "./App.css";
 import { Book } from "./components/Book/Book";
 import BookAdder from "./components/Book/BookAdder";
 import UseStateAdvanced from "./components/useStateAdvanced/UseStateAdvanced";
+import UseEffectBasic from "./components/useEffect/UseEffectBasic";
+import UseEffectCleanUp from "./components/useEffect/UseEffectCleanUp";
 
 function App() {
   const arrayOfBooks = [
@@ -35,7 +37,8 @@ function App() {
   return (
     <>
       <div className="App">
-        <UseStateAdvanced />
+        <UseEffectBasic />
+        <UseEffectCleanUp />
       </div>
     </>
   );

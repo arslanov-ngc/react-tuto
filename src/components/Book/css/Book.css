@@ -31,16 +31,3 @@
   gap: 1rem;
   margin-top: 1rem;
 }
-.btn {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  text-shadow: -3px 3px 1px #000;
-  transition: 0.2s ease;
-  user-select: none;
-}
-.btn:hover {
-  text-shadow: 0 0 3px #000;
-}

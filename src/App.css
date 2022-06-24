@@ -13,6 +13,7 @@
   flex-direction: column;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
 .title {
   font-size: 3em;
   color: #35475a;
@@ -23,4 +24,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: -3px 3px 1px #000;
+  transition: 0.2s ease;
+  user-select: none;
+}
+.btn:hover {
+  text-shadow: 0 0 3px #000;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 1em;
+  color: #333;
+  margin: 1rem 0;
 }
