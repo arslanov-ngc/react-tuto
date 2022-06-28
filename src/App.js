@@ -1,11 +1,11 @@
 import "./App.css";
-import MultipleReturning from "./components/conditional-returning/MultipleReturning";
+import ShortCircuit from "./components/short-circuit/ShortCircuit";
 
 function App() {
   return (
     <>
       <div className="App">
-        <MultipleReturning />
+        <ShortCircuit />
       </div>
     </>
   );
