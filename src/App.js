@@ -1,12 +1,11 @@
 import "./App.css";
-import ControlledInput from "./components/controlled-input/ControlledInput";
-import ShortCircuit from "./components/short-circuit/ShortCircuit";
+import UseRefBasic from "./components/useRef/UseRefBasic";
 
 function App() {
   return (
     <>
       <div className="App">
-        <ControlledInput />
+        <UseRefBasic />
       </div>
     </>
   );
