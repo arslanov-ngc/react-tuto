@@ -125,11 +125,8 @@ h3 {
   display: grid;
   grid-template-columns: 10% 40% 40% 10%;
 }
-.people__content .person:nth-child(even){
+.people__content .person:nth-child(even) {
   background-color: rgba(53, 71, 90, 0.9);
-}
-.people span.bordered {
-  border-right: 1px solid #fff;
 }
 .people__content .person .remove {
   border: none;
@@ -142,4 +139,30 @@ h3 {
 .people__content .person .remove:hover {
   background-color: rgba(221, 99, 99, 0.4);
   color: rgba(255, 255, 255, 0.6);
+}
+
+.content {
+  width: 100%;
+}
+
+.content.flex .people__content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.content.flex .people__content .person {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 1rem 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.315);
+  color: #000;
 }

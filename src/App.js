@@ -1,11 +1,13 @@
 import "./App.css";
-import UseRefBasic from "./components/useRef/UseRefBasic";
+import UseReducer from "./components/useReducer/UseReducer";
+// import TestUseState from "./components/useReducer/TestUseState";
 
 function App() {
   return (
     <>
       <div className="App">
-        <UseRefBasic />
+        {/* <TestUseState /> */}
+        <UseReducer />  
       </div>
     </>
   );
