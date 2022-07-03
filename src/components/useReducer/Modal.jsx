@@ -1,7 +1,7 @@
 import React from "react";
 
-const Modal = ({ modalTxt }) => {
-  return <div className="modal">{modalTxt}</div>;
+const Modal = ({ children }) => {
+  return <div className="modal">{children}</div>;
 };
 
 export default Modal;

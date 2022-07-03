@@ -1,26 +1,5 @@
 import { useState, useReducer } from "react";
-
 import Modal from "./Modal";
-
-const reducer = (state, action) => {
-  if (action.type === "Add_Item") {
-    const newPeople = [...state.people, action.payload];
-    return {
-      ...state,
-      people: newPeople,
-      isModalOpen: true,
-      modalTxt: "item added",
-    };
-  }
-  if (action.type === "No_Value") {
-    return {
-      ...state,
-      isModalOpen: true,
-      modalTxt: "Please, fill input",
-    };
-  }
-  throw new Error("Some error");
-};
 
 const defaultState = {
   people: [],
@@ -28,31 +7,48 @@ const defaultState = {
   modalTxt: "",
 };
 
+const reducer = (state, action) => {
+  if (action.type === "ADD") {
+    const newPeople = [...state.people, action.payload];
+    return {
+      ...state,
+      people: newPeople,
+      isModalOpen: true,
+      modalTxt: "New name added!",
+    };
+  }
+  if (action.type === "NULL") {
+    return {
+      ...state,
+      isModalOpen: true,
+      modalTxt: "Please, enter something!",
+    };
+  }
+  throw new Error("No matching action type!");
+};
+
 const UseReducer = () => {
   const [name, setName] = useState("");
   const [state, dispatch] = useReducer(reducer, defaultState);
-
-  console.log(state);
-  console.log(dispatch);
 
   const submitHandler = (e) => {
     e.preventDefault();
 
     if (name) {
-      const newItem = { id: new Date().getTime.toString(), name };
-      dispatch({ type: "Add_Item", payload: newItem });
+      const newName = { id: new Date().getTime().toString(), name };
+      dispatch({ type: "ADD", payload: newName });
     } else {
-      dispatch({ type: "No_Value" });
+      dispatch({ type: "NULL" });
     }
   };
 
   return (
     <>
-      {state.isModalOpen && <Modal modalTxt={state.modalTxt} />}
+      {state.isModalOpen && <Modal>{state.modalTxt}</Modal>}
       <form className="form" onSubmit={submitHandler}>
         <div className="form__control">
           <label>Name</label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <button type="submit" className="btn">
           Add
