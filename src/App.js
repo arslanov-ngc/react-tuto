@@ -1,13 +1,13 @@
 import "./App.css";
-import UseReducer from "./components/useReducer/UseReducer";
-// import TestUseState from "./components/useReducer/TestUseState";
+import ContextAPI from "./components/hooks/useContext/ContextAPI";
+// import PropsDrilling from "./components/props-drilling/PropsDrilling";
 
 function App() {
   return (
     <>
       <div className="App">
-        {/* <TestUseState /> */}
-        <UseReducer />  
+        {/* <PropsDrilling /> */}
+        <ContextAPI />
       </div>
     </>
   );
