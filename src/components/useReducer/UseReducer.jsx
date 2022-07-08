@@ -1,30 +1,11 @@
 import { useState, useReducer } from "react";
+import {reducer} from "./reducer";
 import Modal from "./Modal";
 
 const defaultState = {
   people: [],
   isModalOpen: false,
   modalTxt: "",
-};
-
-const reducer = (state, action) => {
-  if (action.type === "ADD") {
-    const newPeople = [...state.people, action.payload];
-    return {
-      ...state,
-      people: newPeople,
-      isModalOpen: true,
-      modalTxt: "New name added!",
-    };
-  }
-  if (action.type === "NULL") {
-    return {
-      ...state,
-      isModalOpen: true,
-      modalTxt: "Please, enter something!",
-    };
-  }
-  throw new Error("No matching action type!");
 };
 
 const UseReducer = () => {
@@ -36,15 +17,20 @@ const UseReducer = () => {
 
     if (name) {
       const newName = { id: new Date().getTime().toString(), name };
-      dispatch({ type: "ADD", payload: newName });
+      dispatch({ type: "ADD_VALUE", payload: newName });
+      setName("");
     } else {
-      dispatch({ type: "NULL" });
+      dispatch({ type: "EMPTY_VALUE" });
     }
+  };
+
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
   };
 
   return (
     <>
-      {state.isModalOpen && <Modal>{state.modalTxt}</Modal>}
+      {state.isModalOpen && <Modal closeModal={closeModal}>{state.modalTxt}</Modal>}
       <form className="form" onSubmit={submitHandler}>
         <div className="form__control">
           <label>Name</label>
@@ -60,7 +46,9 @@ const UseReducer = () => {
             return (
               <div className="person" key={person.id}>
                 <span>{person.name}</span>
-                <button className="remove">remove</button>
+                <button className="remove" onClick={() => dispatch({ type: "DELETE_VALUE", payload: person.id })}>
+                  remove
+                </button>
               </div>
             );
           })}
