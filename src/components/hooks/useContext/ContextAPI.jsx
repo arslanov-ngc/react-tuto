@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { data } from "../useState/data";
 
 const PhoneContext = React.createContext();
-
 const ContextAPI = () => {
   const [list, setList] = useState(data);
 

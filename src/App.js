@@ -1,13 +1,14 @@
 import "./App.css";
-import ContextAPI from "./components/hooks/useContext/ContextAPI";
-// import PropsDrilling from "./components/props-drilling/PropsDrilling";
+import PropTypes from "./components/prop-types/PropTypes";
+
+// import Example from "./components/custom-hook/example";
 
 function App() {
   return (
     <>
       <div className="App">
-        {/* <PropsDrilling /> */}
-        <ContextAPI />
+        {/* <Example /> */}
+        <PropTypes />
       </div>
     </>
   );
