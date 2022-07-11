@@ -1,17 +1,9 @@
+import React from "react";
 import "./App.css";
-import PropTypes from "./components/prop-types/PropTypes";
+import MainRouter from "./components/Router/MainRouter";
 
-// import Example from "./components/custom-hook/example";
-
-function App() {
-  return (
-    <>
-      <div className="App">
-        {/* <Example /> */}
-        <PropTypes />
-      </div>
-    </>
-  );
-}
+const App = () => {
+  return <MainRouter />;
+};
 
 export default App;
